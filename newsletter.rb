@@ -28,31 +28,35 @@ ARTICLES = [
 #########################
 
 def calculate_recipients(subscribers, unsubscribed)
+  new_array = []
   new_array = [subscribers.delete(unsubscribed)]
   return new_array
-  puts new_array
   # Using the SUBSCRIBERS and UNSUBSCRIBED arrays,
   # write a method that will return an array of only the subscribers who haven't unsubscribed
 end
-binding.pry
+
 
 def first_n_articles(number_of_articles)
   ARTICLES.first(number_of_articles)
 end
 
-def print_recipients
+def print_recipients(subscribers)
+  subscribers.join(",")
+  return subscribers
   # Write a method that uses the output of calculate_recipients
   # and returns a list of emails separated by commas
   # Ex) "abc@email.com, def@email.com, ghi@email.com"
 end
 
-def print_one_article(article)
+def print_one_article(articles)
+ pp articles
   # Write a method that will take an article hash
   # and print the title, author and text as a formatted string
   # See the README/sample output for examples
 end
 
 def print_many_articles(articles)
+
   # Write a method that will take in an array of article hashes
   # and format each one using the print_one_article method
 end
